@@ -1,0 +1,13 @@
+#syncPanel{position:fixed;top:8px;right:8px;z-index:20;display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end;gap:6px;max-width:calc(100vw - 16px);font-size:13px}
+#syncPanel button,#syncDialog button{min-width:44px;min-height:44px;padding:8px 12px;border:0;border-radius:8px;background:#111;color:white;cursor:pointer;font:inherit}
+#syncPanel [hidden]{display:none}
+#printBtn[hidden]{display:none!important}
+#syncStatus{padding:7px 10px;border-radius:8px;background:white;color:#111;box-shadow:0 2px 12px #0002}
+#syncDialog{margin:auto;width:min(420px,calc(100vw - 24px));max-height:calc(100dvh - 24px);padding:24px;border:0;border-radius:16px;box-shadow:0 12px 48px #0005;overflow:auto}
+#syncDialog::backdrop{background:#0009}
+#syncForm{display:grid;gap:14px}
+#syncForm label{display:grid;gap:6px}
+#syncForm input{width:100%;min-height:44px;padding:10px;font:inherit}
+#syncError{min-height:1.5em}
+html.sync-locked #navPrev,html.sync-locked #navNext{pointer-events:none;opacity:.4}
+@media print{#syncPanel,#syncDialog{display:none!important}html.sync-no-pdf body>*{display:none!important}html.sync-no-pdf body::after{content:'PDF 저장 비활성 상태';display:block;color:#111}}
