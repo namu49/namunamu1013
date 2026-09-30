@@ -37,7 +37,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:'Pretendard Variable',Pretendard,-apple-system,'Malgun Gothic',sans-serif;
-  line-height:1.65;-webkit-text-size-adjust:100%;word-break:keep-all;overflow-wrap:anywhere;overflow-x:hidden}
+  line-height:1.65;-webkit-text-size-adjust:100%;word-break:keep-all;overflow-wrap:anywhere}
 img,svg,video{max-width:100%;height:auto}
 h1,h2,h3{text-wrap:balance;letter-spacing:-.01em}
 p,li{text-wrap:pretty}
@@ -108,10 +108,11 @@ table.tbl tbody th{width:7.5rem;color:var(--sub);font-weight:700;white-space:now
 .phead h2{margin-bottom:0}
 .pnote{font-size:.9rem;color:var(--sub);margin-bottom:.9rem}
 .plist{list-style:none;display:flex;flex-direction:column;gap:.8rem;counter-reset:p}
-.pitem{background:var(--paper);border-radius:.8rem;box-shadow:var(--shadow);padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.5rem;counter-increment:p}
+.pitem{background:#111;color:#fff;border-radius:.8rem;box-shadow:var(--shadow);padding:1rem 1.1rem;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.5rem;align-items:center;counter-increment:p}
 .pitem .pt{font-size:1rem;font-weight:900}
 .pitem .pt::before{content:counter(p) ". "}
-.pitem .px{font-size:.92rem;line-height:1.65;white-space:pre-wrap;background:var(--soft);border-left:4px solid var(--ink);border-radius:.4rem;padding:.7rem .9rem}
+.pitem .px{grid-column:1/-1;grid-row:2;font-size:.92rem;line-height:1.65;white-space:pre-wrap;background:#111;color:#fff;padding:.7rem 0}
+.pitem .pbtn{grid-column:2;grid-row:1;justify-self:end;background:#fff;color:#111;border:0}
 .pbtn{align-self:flex-start;display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 1.1rem;border-radius:999px;
   border:1.5px solid var(--ink);background:var(--ink);color:var(--bg);font:inherit;font-size:.9rem;font-weight:800;cursor:pointer}
 .pbtn:hover{opacity:.85}
@@ -182,7 +183,7 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 .3
           <div class="name">나무쌤</div>
           <div class="role">AI 리터러시 강사</div>
           <ul>
-            <li>중장년층 눈높이의 쉬운 AI 설명</li>
+            <li>중장년층 눈높이에 맞춘 AI 설명</li>
             <li>스마트폰 중심의 단계별 실습</li>
             <li>일상에서 바로 쓰는 AI 활용 안내</li>
           </ul>

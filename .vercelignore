@@ -1,4 +1,8 @@
 stats.php
-firebase/
+firebase/slides-firebase.html
+firebase/database.rules.json
+firebase/README.md
+firebase/*.test.cjs
+firebase-approval.png
 AGENTS.md
 CLAUDE.md
